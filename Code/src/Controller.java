@@ -1,4 +1,4 @@
-package com.example.code;
+package kivita;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
