@@ -112,7 +112,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>game.kivita.chasutnakivitata/game.kivita.chasutnakivitata.HelloApplication
+                            <mainClass>game.kivita.chasutnakivitata/game.kivita.chasutnakivitata.Application
                             </mainClass>
                         </configuration>
                     </execution>
