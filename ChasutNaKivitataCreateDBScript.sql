@@ -10,12 +10,12 @@ USE `ChasutNaKivitata` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `ChasutNaKivitata`.`Register` (
   `idRegister` INT NOT NULL,
-  `Email` VARCHAR(45) NOT NULL,
-  `Fname` VARCHAR(45) NOT NULL,
-  `Password` VARCHAR(45) NOT NULL,
+  `Fname` VARCHAR(45) NOT NULL,  
   `Lname` VARCHAR(45) NOT NULL,
+  `Email` VARCHAR(45) NOT NULL,
+  `Password` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idRegister`),
-  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC) VISIBLE)
+  UNIQUE INDEX `Email_UNIQUE` (`Email` ASC))
 ENGINE = InnoDB;
 
 
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `ChasutNaKivitata`.`Scores` (
   `Date` DATE NOT NULL,
   `idRegister` INT NOT NULL,
   PRIMARY KEY (`idScores`, `idRegister`),
-  INDEX `fk_Scores_Register_idx` (`idRegister` ASC) VISIBLE,
+  INDEX `fk_Scores_Register_idx` (`idRegister` ASC),
   CONSTRAINT `fk_Scores_Register`
     FOREIGN KEY (`idRegister`)
     REFERENCES `ChasutNaKivitata`.`Register` (`idRegister`)
