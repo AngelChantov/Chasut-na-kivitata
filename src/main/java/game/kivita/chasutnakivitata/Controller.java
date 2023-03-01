@@ -39,42 +39,67 @@ public class Controller implements Initializable {
 
     @FXML
     void button1() {
-        System.out.println("B1 works");
+
         if (!Game.dialogs[Game.sceneNum].options[0].equals("")){
-            Game.dialogs[Game.sceneNum].choice = 1;
-            Game.sceneNum++;
+            Game.dialogs[Game.sceneNum].choice = 0;
+            Game.points = Game.points + Game.dialogs[Game.sceneNum].bonusPoints[0];
+
+
+            Game.sceneNum = Game.dialogs[Game.sceneNum].nextDialog[0];
             Game.scene(text,choice1,choice2,choice3,choice4);
         }
+
+        System.out.println("B1 works");
+        System.out.println(Game.points);
     }
 
     @FXML
     void button2() {
-        System.out.println("B2 works");
+
         if (!Game.dialogs[Game.sceneNum].options[1].equals("")){
-            Game.dialogs[Game.sceneNum].choice = 2;
-            Game.sceneNum++;
+            Game.dialogs[Game.sceneNum].choice = 1;
+            Game.points += Game.dialogs[Game.sceneNum].bonusPoints[1];
+
+
+            Game.sceneNum = Game.dialogs[Game.sceneNum].nextDialog[1];
             Game.scene(text,choice1,choice2,choice3,choice4);
         }
+
+        System.out.println("B2 works");
+        System.out.println(Game.points);
     }
 
     @FXML
     void button3() {
-        System.out.println("B3 works");
+
         if (!Game.dialogs[Game.sceneNum].options[2].equals("")){
-            Game.dialogs[Game.sceneNum].choice = 3;
-            Game.sceneNum++;
+            Game.dialogs[Game.sceneNum].choice = 2;
+            Game.points += Game.dialogs[Game.sceneNum].bonusPoints[2];
+
+
+            Game.sceneNum = Game.dialogs[Game.sceneNum].nextDialog[2];
             Game.scene(text,choice1,choice2,choice3,choice4);
         }
+
+        System.out.println("B3 works");
+        System.out.println(Game.points);
     }
 
     @FXML
     void button4() {
-        System.out.println("B4 works");
+
         if (!Game.dialogs[Game.sceneNum].options[3].equals("")){
-            Game.dialogs[Game.sceneNum].choice = 4;
-            Game.sceneNum++;
+            Game.dialogs[Game.sceneNum].choice = 3;
+            Game.points += Game.dialogs[Game.sceneNum].bonusPoints[3];
+
+
+            Game.sceneNum = Game.dialogs[Game.sceneNum].nextDialog[3];
             Game.scene(text,choice1,choice2,choice3,choice4);
+
         }
+
+        System.out.println("B4 works");
+        System.out.println(Game.points);
     }
 
 
