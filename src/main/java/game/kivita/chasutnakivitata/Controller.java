@@ -1,14 +1,18 @@
 package game.kivita.chasutnakivitata;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.io.File;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class Controller {
+
+public class Controller implements Initializable {
     @FXML
     private ImageView background;
 
@@ -33,5 +37,53 @@ public class Controller {
     @FXML
     private TextArea text;
 
+    @FXML
+    void button1() {
+        System.out.println("B1 works");
+        if (!Game.dialogs[Game.sceneNum].options[0].equals("")){
+            Game.dialogs[Game.sceneNum].choice = 1;
+            Game.sceneNum++;
+            Game.scene(text,choice1,choice2,choice3,choice4);
+        }
+    }
 
+    @FXML
+    void button2() {
+        System.out.println("B2 works");
+        if (!Game.dialogs[Game.sceneNum].options[1].equals("")){
+            Game.dialogs[Game.sceneNum].choice = 2;
+            Game.sceneNum++;
+            Game.scene(text,choice1,choice2,choice3,choice4);
+        }
+    }
+
+    @FXML
+    void button3() {
+        System.out.println("B3 works");
+        if (!Game.dialogs[Game.sceneNum].options[2].equals("")){
+            Game.dialogs[Game.sceneNum].choice = 3;
+            Game.sceneNum++;
+            Game.scene(text,choice1,choice2,choice3,choice4);
+        }
+    }
+
+    @FXML
+    void button4() {
+        System.out.println("B4 works");
+        if (!Game.dialogs[Game.sceneNum].options[3].equals("")){
+            Game.dialogs[Game.sceneNum].choice = 4;
+            Game.sceneNum++;
+            Game.scene(text,choice1,choice2,choice3,choice4);
+        }
+    }
+
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        File file = new File("src/main/resources/game/kivita/chasutnakivitata/pictures/krasi.png");
+        Image image = new Image(file.toURI().toString());
+        leftpic.setImage(image);
+        Game.scene(text,choice1,choice2,choice3,choice4);
+    }
 }

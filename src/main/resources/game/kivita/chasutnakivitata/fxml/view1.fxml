@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.kivita.chasutnakivitata.Controller">
    <children>
       <ImageView fx:id="background" fitHeight="348.0" fitWidth="1280.0" layoutY="-8.0" pickOnBounds="true">
          <image>
@@ -24,10 +24,10 @@
                   <Font size="28.0" />
                </font>
             </TextArea>
-            <Button fx:id="choice4" layoutX="915.0" layoutY="247.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="305.0" text="Button" />
-            <Button fx:id="choice1" layoutY="247.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="305.0" text="Button" />
-            <Button fx:id="choice2" layoutX="305.0" layoutY="247.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="305.0" text="Button" />
-            <Button fx:id="choice3" layoutX="610.0" layoutY="247.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="305.0" text="Button" />
+            <Button fx:id="choice4" layoutX="901.0" layoutY="247.0" mnemonicParsing="false" onAction="#button4" prefHeight="85.0" prefWidth="305.0" text="Button" />
+            <Button fx:id="choice1" layoutY="247.0" mnemonicParsing="false" onAction="#button1" prefHeight="85.0" prefWidth="305.0" text="Button" />
+            <Button fx:id="choice2" layoutX="305.0" layoutY="247.0" mnemonicParsing="false" onAction="#button2" prefHeight="85.0" prefWidth="305.0" text="Button" />
+            <Button fx:id="choice3" layoutX="610.0" layoutY="247.0" mnemonicParsing="false" onAction="#button3" prefHeight="85.0" prefWidth="305.0" text="Button" />
          </children>
       </Pane>
    </children>
