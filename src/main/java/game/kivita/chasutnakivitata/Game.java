@@ -39,9 +39,13 @@ public class Game {
         choice2.setText(dialogs[sceneNum].options[1]);
         choice3.setText(dialogs[sceneNum].options[2]);
         choice4.setText(dialogs[sceneNum].options[3]);
-
-
     }
+
+    //background changing by sceneNum
+    //sceneNum > 100 obshak
+    // 100 < sceneNum < 200 v daskalo
+    // 200 < sceneNum < 300 v daskalo s krasi
+
 
 
 }
