@@ -12,4 +12,6 @@ module game.kivita.chasutnakivitata {
 
     opens game.kivita.chasutnakivitata to javafx.fxml;
     exports game.kivita.chasutnakivitata;
+    exports game.kivita.chasutnakivitata.Controllers;
+    opens game.kivita.chasutnakivitata.Controllers to javafx.fxml;
 }

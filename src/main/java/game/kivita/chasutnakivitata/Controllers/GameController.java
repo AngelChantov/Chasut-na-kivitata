@@ -1,4 +1,4 @@
-package game.kivita.chasutnakivitata;
+package game.kivita.chasutnakivitata.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -12,7 +12,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class Controller implements Initializable {
+public class GameController /*implements Initializable */{
     @FXML
     private ImageView background;
 
@@ -37,7 +37,7 @@ public class Controller implements Initializable {
     @FXML
     private TextArea text;
 
-
+/*
     @FXML
     void button1() {
 
@@ -107,9 +107,11 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        //File file = new File("src/main/resources/game/kivita/chasutnakivitata/pictures/krasi.png");
-        //Image image = new Image(file.toURI().toString());
-        //leftpic.setImage(image);
+        File file = new File("src/main/resources/game/kivita/chasutnakivitata/pictures/krasi.png");
+        Image image = new Image(file.toURI().toString());
+        leftpic.setImage(image);
         Game.scene(text,choice1,choice2,choice3,choice4);
     }
+
+ */
 }
