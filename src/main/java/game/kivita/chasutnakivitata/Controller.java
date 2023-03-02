@@ -107,9 +107,9 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        File file = new File("src/main/resources/game/kivita/chasutnakivitata/pictures/krasi.png");
-        Image image = new Image(file.toURI().toString());
-        leftpic.setImage(image);
+        //File file = new File("src/main/resources/game/kivita/chasutnakivitata/pictures/krasi.png");
+        //Image image = new Image(file.toURI().toString());
+        //leftpic.setImage(image);
         Game.scene(text,choice1,choice2,choice3,choice4);
     }
 }
