@@ -64,16 +64,24 @@ public class SignInController {
             inputError.setText("Password cannot be shorter than 8 characters.");
         }else {
 
+            inputError.setText("");
 
             stmt.setString(1, email.getText());
             stmt.setString(2, password.getText());
 
             //TO-DO Проверка дали съществува такъв акаунт::
             ResultSet result = stmt.executeQuery();
-            System.out.println(result.toString());
+            if (!result.next()) {
+                inputError.setText("Email or password is incorrect.");
+            } else {
                 //TO-DO GO TO GAME::
 
-        }
+                inputError.setFill(Color.BLACK);
+                inputError.setText("LOG IN successful");
+            }
 
+
+
+        }
     }
 }
