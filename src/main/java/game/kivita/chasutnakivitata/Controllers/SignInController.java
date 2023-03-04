@@ -80,7 +80,7 @@ public class SignInController {
                 inputError.setFill(Color.BLACK);
                 inputError.setText("LOG IN successful");
 
-                //TO-DO Character selection screen
+                //TO-DO Character selection screen and get player name
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/game/kivita/chasutnakivitata/fxml/MainGame.fxml")));
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root, 1280,720);
