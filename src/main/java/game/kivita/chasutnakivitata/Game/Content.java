@@ -1,10 +1,9 @@
-package game.kivita.chasutnakivitata;
+package game.kivita.chasutnakivitata.Game;
 
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 
-public class Game {
+public class Content {
     static Dialog dialog1 = new Dialog(
             "Otivash na daskalo?",
             new String[]{"da", "ne", "", ""},
@@ -29,11 +28,11 @@ public class Game {
             );
 
 
-    static Dialog[] dialogs = {dialog1,dialog2,dialog3};
-    static int points = 0;
-    static int sceneNum = 0;
+    public static Dialog[] dialogs = {dialog1,dialog2,dialog3};
+    public static int points = 0;
+    public static int sceneNum = 0;
 
-    static void scene(TextArea text, Button choice1, Button choice2, Button choice3, Button choice4){
+    public static void scene(TextArea text, Button choice1, Button choice2, Button choice3, Button choice4){
         text.setText(dialogs[sceneNum].text);
         choice1.setText(dialogs[sceneNum].options[0]);
         choice2.setText(dialogs[sceneNum].options[1]);

@@ -1,13 +1,13 @@
-package game.kivita.chasutnakivitata;
+package game.kivita.chasutnakivitata.Game;
 
 public class Dialog {
 
-    String text;
-    String[] options;
-    int[] nextDialog;
-    int[] bonusPoints;
+    public String text;
+    public String[] options;
+    public int[] nextDialog;
+    public int[] bonusPoints;
 
-    int choice;
+    public int choice;
 
     public Dialog(String text, String[] options, int[] nextDialog, int[] bonusPoints) {
         this.text = text;

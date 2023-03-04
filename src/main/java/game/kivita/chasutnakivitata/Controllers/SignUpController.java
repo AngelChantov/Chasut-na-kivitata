@@ -4,6 +4,7 @@ import game.kivita.chasutnakivitata.DataBaseDetails;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -53,7 +55,7 @@ public class SignUpController {
     }
 
     @FXML
-    void signUp(ActionEvent event) throws SQLException {
+    void signUp(ActionEvent event) throws SQLException, IOException {
 
         Connection connection = DriverManager.getConnection(DataBaseDetails.DB_URL, DataBaseDetails.USER, DataBaseDetails.PASS);
         PreparedStatement stmt = connection.prepareStatement("INSERT INTO register ( Fname, Lname, Email, Password) VALUES (?,?,?,?)");
@@ -74,6 +76,7 @@ public class SignUpController {
             inputError.setText("Password cannot be shorter than 8 characters.");
         }else {
 
+            inputError.setText("");
 
             stmt.setString(1, firstName.getText());
             stmt.setString(2, lastName.getText());
@@ -84,14 +87,22 @@ public class SignUpController {
 
             if (result > 0){
 
-                //TO-DO GO TO GAME::
+                //TO-DO Character selection screen
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/game/kivita/chasutnakivitata/fxml/MainGame.fxml")));
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                Scene scene = new Scene(root, 1280,720);
 
-                inputError.setFill(Color.BLACK);
-                inputError.setText("Registered successfully.");
+                Rectangle2D resolution = Screen.getPrimary().getVisualBounds();
+                stage.setX((resolution.getWidth() - stage.getWidth())/4);
+                stage.setY((resolution.getHeight() - stage.getHeight())/2);
 
+                stage.setScene(scene);
+                stage.show();
 
             }else {
-                inputError.setText("Unsuccessful registration, please try agin.");
+
+                inputError.setText("Unsuccessful registration, please try again.");
+
             }
         }
 

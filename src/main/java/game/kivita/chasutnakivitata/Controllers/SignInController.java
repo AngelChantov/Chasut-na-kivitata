@@ -4,6 +4,7 @@ import game.kivita.chasutnakivitata.DataBaseDetails;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,6 +13,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -47,7 +49,7 @@ public class SignInController {
 
 
     @FXML
-    void logIn(ActionEvent event) throws SQLException {
+    void logIn(ActionEvent event) throws SQLException, IOException {
 
         Connection connection = DriverManager.getConnection(DataBaseDetails.DB_URL, DataBaseDetails.USER, DataBaseDetails.PASS);
         PreparedStatement stmt = connection.prepareStatement("SELECT * FROM register WHERE email = ? AND password = ?");
@@ -74,13 +76,23 @@ public class SignInController {
             if (!result.next()) {
                 inputError.setText("Email or password is incorrect.");
             } else {
-                //TO-DO GO TO GAME::
 
                 inputError.setFill(Color.BLACK);
                 inputError.setText("LOG IN successful");
+
+                //TO-DO Character selection screen
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/game/kivita/chasutnakivitata/fxml/MainGame.fxml")));
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                Scene scene = new Scene(root, 1280,720);
+
+                Rectangle2D resolution = Screen.getPrimary().getVisualBounds();
+                stage.setX((resolution.getWidth() - stage.getWidth()) / 4);
+                stage.setY((resolution.getHeight() - stage.getHeight()) / 2);
+
+                stage.setScene(scene);
+                stage.show();
+
             }
-
-
 
         }
     }

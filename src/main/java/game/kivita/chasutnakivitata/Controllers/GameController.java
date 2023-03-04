@@ -1,5 +1,6 @@
 package game.kivita.chasutnakivitata.Controllers;
 
+import game.kivita.chasutnakivitata.Game.Content;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -12,7 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class GameController /*implements Initializable */{
+public class GameController implements Initializable{
     @FXML
     private ImageView background;
 
@@ -37,70 +38,70 @@ public class GameController /*implements Initializable */{
     @FXML
     private TextArea text;
 
-/*
+
     @FXML
     void button1() {
 
-        if (!Game.dialogs[Game.sceneNum].options[0].equals("")){
-            Game.dialogs[Game.sceneNum].choice = 0;
-            Game.points = Game.points + Game.dialogs[Game.sceneNum].bonusPoints[0];
+        if (!Content.dialogs[Content.sceneNum].options[0].equals("")){
+            Content.dialogs[Content.sceneNum].choice = 0;
+            Content.points = Content.points + Content.dialogs[Content.sceneNum].bonusPoints[0];
 
 
-            Game.sceneNum = Game.dialogs[Game.sceneNum].nextDialog[0];
-            Game.scene(text,choice1,choice2,choice3,choice4);
+            Content.sceneNum = Content.dialogs[Content.sceneNum].nextDialog[0];
+            Content.scene(text,choice1,choice2,choice3,choice4);
         }
 
         System.out.println("B1 works");
-        System.out.println(Game.points);
+        System.out.println(Content.points);
     }
 
     @FXML
     void button2() {
 
-        if (!Game.dialogs[Game.sceneNum].options[1].equals("")){
-            Game.dialogs[Game.sceneNum].choice = 1;
-            Game.points += Game.dialogs[Game.sceneNum].bonusPoints[1];
+        if (!Content.dialogs[Content.sceneNum].options[1].equals("")){
+            Content.dialogs[Content.sceneNum].choice = 1;
+            Content.points += Content.dialogs[Content.sceneNum].bonusPoints[1];
 
 
-            Game.sceneNum = Game.dialogs[Game.sceneNum].nextDialog[1];
-            Game.scene(text,choice1,choice2,choice3,choice4);
+            Content.sceneNum = Content.dialogs[Content.sceneNum].nextDialog[1];
+            Content.scene(text,choice1,choice2,choice3,choice4);
         }
 
         System.out.println("B2 works");
-        System.out.println(Game.points);
+        System.out.println(Content.points);
     }
 
     @FXML
     void button3() {
 
-        if (!Game.dialogs[Game.sceneNum].options[2].equals("")){
-            Game.dialogs[Game.sceneNum].choice = 2;
-            Game.points += Game.dialogs[Game.sceneNum].bonusPoints[2];
+        if (!Content.dialogs[Content.sceneNum].options[2].equals("")){
+            Content.dialogs[Content.sceneNum].choice = 2;
+            Content.points += Content.dialogs[Content.sceneNum].bonusPoints[2];
 
 
-            Game.sceneNum = Game.dialogs[Game.sceneNum].nextDialog[2];
-            Game.scene(text,choice1,choice2,choice3,choice4);
+            Content.sceneNum = Content.dialogs[Content.sceneNum].nextDialog[2];
+            Content.scene(text,choice1,choice2,choice3,choice4);
         }
 
         System.out.println("B3 works");
-        System.out.println(Game.points);
+        System.out.println(Content.points);
     }
 
     @FXML
     void button4() {
 
-        if (!Game.dialogs[Game.sceneNum].options[3].equals("")){
-            Game.dialogs[Game.sceneNum].choice = 3;
-            Game.points += Game.dialogs[Game.sceneNum].bonusPoints[3];
+        if (!Content.dialogs[Content.sceneNum].options[3].equals("")){
+            Content.dialogs[Content.sceneNum].choice = 3;
+            Content.points += Content.dialogs[Content.sceneNum].bonusPoints[3];
 
 
-            Game.sceneNum = Game.dialogs[Game.sceneNum].nextDialog[3];
-            Game.scene(text,choice1,choice2,choice3,choice4);
+            Content.sceneNum = Content.dialogs[Content.sceneNum].nextDialog[3];
+            Content.scene(text,choice1,choice2,choice3,choice4);
 
         }
 
         System.out.println("B4 works");
-        System.out.println(Game.points);
+        System.out.println(Content.points);
     }
 
 
@@ -110,8 +111,8 @@ public class GameController /*implements Initializable */{
         File file = new File("src/main/resources/game/kivita/chasutnakivitata/pictures/krasi.png");
         Image image = new Image(file.toURI().toString());
         leftpic.setImage(image);
-        Game.scene(text,choice1,choice2,choice3,choice4);
+        Content.scene(text,choice1,choice2,choice3,choice4);
     }
 
- */
+
 }
