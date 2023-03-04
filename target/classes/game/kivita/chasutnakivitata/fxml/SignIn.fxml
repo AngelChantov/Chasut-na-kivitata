@@ -17,7 +17,7 @@
                </font>
             </Text>
             <Button fx:id="signup" layoutX="195.0" layoutY="598.0" mnemonicParsing="false" onAction="#goToSignUp" prefHeight="29.0" prefWidth="85.0" text="Sign up" />
-            <Text fill="#231f20" layoutX="127.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" wrappingWidth="58.581207275390625">
+            <Text fill="#231f20" layoutX="127.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" wrappingWidth="58.581207275390625">
                <font>
                   <Font size="18.0" />
                </font>
@@ -27,19 +27,24 @@
                   <Font size="18.0" />
                </font>
             </Text>
-            <Button fx:id="login" layoutX="123.0" layoutY="405.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="234.0" text="Log in">
+            <Button fx:id="login" layoutX="123.0" layoutY="391.0" mnemonicParsing="false" onAction="#logIn" prefHeight="25.0" prefWidth="234.0" text="Log in">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <TextField fx:id="email" layoutX="123.0" layoutY="200.0" prefHeight="25.0" prefWidth="238.0" promptText="ChasutNaKivitata@gmail.com" />
+            <TextField fx:id="email" layoutX="123.0" layoutY="204.0" prefHeight="25.0" prefWidth="238.0" promptText="ChasutNaKivitata@gmail.com" />
+            <Text fill="#231f20" layoutX="191.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+               <font>
+                  <Font size="52.0" />
+               </font>
+            </Text>
+            <Text fx:id="inputError" fill="RED" layoutX="93.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="289.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
          </children>
       </Pane>
-      <Text fill="#231f20" layoutX="156.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
-         <font>
-            <Font size="69.0" />
-         </font>
-      </Text>
       <PasswordField fx:id="password" layoutX="123.0" layoutY="304.0" prefHeight="25.0" prefWidth="238.0" promptText="Kivita1234" />
    </children>
 </Pane>

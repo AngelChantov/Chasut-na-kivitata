@@ -29,7 +29,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Text fill="#231f20" layoutX="141.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register" textAlignment="CENTER" wrappingWidth="198.13671875">
+      <Text fill="#231f20" layoutX="141.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register" textAlignment="CENTER" wrappingWidth="198.13671875">
          <font>
             <Font size="52.0" />
          </font>

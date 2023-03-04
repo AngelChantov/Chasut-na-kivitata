@@ -10,6 +10,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -54,7 +56,6 @@ public class SignUpController {
     void signUp(ActionEvent event) throws SQLException {
 
         Connection connection = DriverManager.getConnection(DataBaseDetails.DB_URL, DataBaseDetails.USER, DataBaseDetails.PASS);
-
         PreparedStatement stmt = connection.prepareStatement("INSERT INTO register ( Fname, Lname, Email, Password) VALUES (?,?,?,?)");
 
         Pattern pattern = Pattern.compile("^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$");
@@ -71,16 +72,28 @@ public class SignUpController {
             inputError.setText("Not a valid email.");
         }else if (password.getText().length() < 8){
             inputError.setText("Password cannot be shorter than 8 characters.");
-        }else{
-        inputError.setText("");
-        }
-/*
-        stmt.setString(1, "Ivan");
-        stmt.setString(2, "Ivanov");
-        stmt.setString(3, "qweqwqe");
-        stmt.setString(4, "qweqwe");
-        stmt.executeUpdate();
-*/
-    }
+        }else {
 
+
+            stmt.setString(1, firstName.getText());
+            stmt.setString(2, lastName.getText());
+            stmt.setString(3, email.getText().toLowerCase());
+            stmt.setString(4, password.getText());
+
+            int result = stmt.executeUpdate();
+
+            if (result > 0){
+
+                //TO-DO GO TO GAME::
+
+                inputError.setFill(Color.BLACK);
+                inputError.setText("Registered successfully.");
+
+
+            }else {
+                inputError.setText("Unsuccessful registration, please try agin.");
+            }
+        }
+
+    }
 }

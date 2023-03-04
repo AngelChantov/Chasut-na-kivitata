@@ -17,9 +17,9 @@
                </font>
             </Text>
             <Button fx:id="signIn" layoutX="188.0" layoutY="604.0" mnemonicParsing="false" onAction="#goToSignIn" prefHeight="25.0" prefWidth="102.0" text="Sign in" />
-            <Text fx:id="inputError" fill="RED" layoutX="101.0" layoutY="541.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="278.13671875">
+            <Text fx:id="inputError" fill="RED" layoutX="100.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="278.13671875">
                <font>
-                  <Font size="20.0" />
+                  <Font size="16.0" />
                </font>
             </Text>
          </children>
@@ -29,7 +29,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Text fill="#231f20" layoutX="141.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register" textAlignment="CENTER" wrappingWidth="198.13671875">
+      <Text fill="#231f20" layoutX="141.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register" textAlignment="CENTER" wrappingWidth="198.13671875">
          <font>
             <Font size="52.0" />
          </font>
@@ -56,7 +56,7 @@
       </Pane>
       <Pane layoutX="133.0" layoutY="285.0" prefHeight="51.0" prefWidth="216.0">
          <children>
-            <TextField fx:id="email" layoutY="25.0" prefHeight="25.0" prefWidth="223.0" promptText="Ivanov" />
+            <TextField fx:id="email" layoutY="25.0" prefHeight="25.0" prefWidth="223.0" promptText="ChasutNaKivitata@gmail.com" />
             <Text fill="#231f20" layoutX="6.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" wrappingWidth="86.13671875">
                <font>
                   <Font size="18.0" />
