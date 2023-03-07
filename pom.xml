@@ -16,6 +16,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>12.2.0.jre11</version>
+        </dependency>
+        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>17.0.0.1</version>
@@ -112,7 +117,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>game.kivita.chasutnakivitata/game.kivita.chasutnakivitata.Application
+                            <mainClass>game.kivita.chasutnakivitata/game.kivita.chasutnakivitata.ApplicationStart
                             </mainClass>
                         </configuration>
                     </execution>
