@@ -21,8 +21,8 @@
                <image>
                   <Image url="@../pictures/FemalePlayer2.png" />
                </image></ImageView>
-            <Button layoutX="345.0" layoutY="592.0" mnemonicParsing="false" onAction="#selectCharacterOne" prefHeight="46.0" prefWidth="95.0" text="Character 1" />
-            <Button layoutX="793.0" layoutY="592.0" mnemonicParsing="false" onAction="#selectCharacterTwo" prefHeight="46.0" prefWidth="95.0" text="Character 2" />
+            <Button layoutX="345.0" layoutY="592.0" mnemonicParsing="false" onAction="#selectCharacterOne" prefHeight="46.0" prefWidth="95.0" style="-fx-background-color: #815C2D; -fx-border-color: #261d03;" text="Character 1" textFill="WHITE" />
+            <Button layoutX="793.0" layoutY="592.0" mnemonicParsing="false" onAction="#selectCharacterTwo" prefHeight="46.0" prefWidth="95.0" style="-fx-background-color: #815C2D; -fx-border-color: #261d03;" text="Character 2" textFill="WHITE" />
             <ImageView fitHeight="415.0" fitWidth="378.0" layoutX="206.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../pictures/MalePlayer2.png" />
