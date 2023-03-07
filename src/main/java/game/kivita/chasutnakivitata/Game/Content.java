@@ -2,6 +2,7 @@ package game.kivita.chasutnakivitata.Game;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.text.Text;
 
 public class Content {
     static Dialog dialog1 = new Dialog(
@@ -33,7 +34,7 @@ public class Content {
     public static int sceneNum = 0;
     public static String character;
 
-    public static void scene(TextArea text, Button choice1, Button choice2, Button choice3, Button choice4){
+    public static void scene(Text text, Button choice1, Button choice2, Button choice3, Button choice4){
         text.setText(dialogs[sceneNum].text);
         choice1.setText(dialogs[sceneNum].options[0]);
         choice2.setText(dialogs[sceneNum].options[1]);
