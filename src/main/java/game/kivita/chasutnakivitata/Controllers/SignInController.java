@@ -68,14 +68,11 @@ public class SignInController {
             stmt.setString(1, email.getText());
             stmt.setString(2, password.getText());
 
-            //TO-DO Проверка дали съществува такъв акаунт::
+
             ResultSet result = stmt.executeQuery();
             if (!result.next()) {
                 inputError.setText("Email or password is incorrect.");
             } else {
-
-                inputError.setFill(Color.BLACK);
-                inputError.setText("LOG IN successful");
 
                 //TO-DO Character selection screen and get player name
                 Methods.change(event, "CharacterSelection.fxml",1280,720);

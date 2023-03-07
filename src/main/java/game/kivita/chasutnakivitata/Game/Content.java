@@ -6,13 +6,15 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
+import java.util.Objects;
+
 public class Content {
     static Dialog dialog1 = new Dialog(
             "Otivash na daskalo?",
             new String[]{"da", "ne", "", ""},
             new int[]{1,0},
             new int[]{10,0},
-            "room"
+            "morning"
             );
 
 
@@ -21,7 +23,7 @@ public class Content {
             new String[]{"da", "ne", "moje bi", "ne znam"},
             new int[]{2,2,2,2},
             new int[]{0,0,12,3},
-            "School"
+            "room"
             );
 
 
@@ -30,7 +32,7 @@ public class Content {
             new String[]{"da", "ne", "mhm", ""},
             new int[]{0,0,0,0},
             new int[]{17,0,30,1},
-            "Pans2"
+            "night"
             );
 
 
@@ -45,7 +47,8 @@ public class Content {
         choice2.setText(dialogs[sceneNum].options[1]);
         choice3.setText(dialogs[sceneNum].options[2]);
         choice4.setText(dialogs[sceneNum].options[3]);
-        background.setImage(new Image(Content.class.getResourceAsStream("/game/kivita/chasutnakivitata/pictures/"+dialogs[sceneNum].background+".jpg")));
+        background.setImage(new Image(Objects.requireNonNull(Content.class.getResourceAsStream(
+                "/game/kivita/chasutnakivitata/pictures/Backgrounds/" + dialogs[sceneNum].background + ".jpg"))));
 
     }
 
