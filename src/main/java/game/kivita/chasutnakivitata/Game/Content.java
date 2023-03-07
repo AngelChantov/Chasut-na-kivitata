@@ -31,6 +31,7 @@ public class Content {
     public static Dialog[] dialogs = {dialog1,dialog2,dialog3};
     public static int points = 0;
     public static int sceneNum = 0;
+    public static String character;
 
     public static void scene(TextArea text, Button choice1, Button choice2, Button choice3, Button choice4){
         text.setText(dialogs[sceneNum].text);

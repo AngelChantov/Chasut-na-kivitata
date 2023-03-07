@@ -1,6 +1,7 @@
 package game.kivita.chasutnakivitata.Controllers;
 
 import game.kivita.chasutnakivitata.DataBaseDetails;
+import game.kivita.chasutnakivitata.Methods;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -40,11 +41,7 @@ public class SignInController {
 
     @FXML
     void goToSignUp(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/game/kivita/chasutnakivitata/fxml/SignUp.fxml")));
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root, 480,720);
-        stage.setScene(scene);
-        stage.show();
+        Methods.change(event,"SignUp.fxml",480,720);
     }
 
 
@@ -81,16 +78,7 @@ public class SignInController {
                 inputError.setText("LOG IN successful");
 
                 //TO-DO Character selection screen and get player name
-                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/game/kivita/chasutnakivitata/fxml/MainGame.fxml")));
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                Scene scene = new Scene(root, 1280,720);
-
-                Rectangle2D resolution = Screen.getPrimary().getVisualBounds();
-                stage.setX((resolution.getWidth() - stage.getWidth()) / 4);
-                stage.setY((resolution.getHeight() - stage.getHeight()) / 2);
-
-                stage.setScene(scene);
-                stage.show();
+                Methods.change(event, "CharacterSelection.fxml",1280,720);
 
             }
 
