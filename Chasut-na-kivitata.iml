@@ -20,27 +20,6 @@
         <jarDirectory url="file://C:/Program Files (x86)/MySQL/Connector J 8.0" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/src/main/resources/game/kivita/chasutnakivitata/mysql-connector" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/src/main/resources/game/kivita/chasutnakivitata/mysql-connector/src/build/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources/game/kivita/chasutnakivitata/mysql-connector/src/demo/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources/game/kivita/chasutnakivitata/mysql-connector/src/generated/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources/game/kivita/chasutnakivitata/mysql-connector/src/legacy/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources/game/kivita/chasutnakivitata/mysql-connector/src/main/core-api/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources/game/kivita/chasutnakivitata/mysql-connector/src/main/core-impl/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources/game/kivita/chasutnakivitata/mysql-connector/src/main/protocol-impl/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources/game/kivita/chasutnakivitata/mysql-connector/src/main/user-api/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources/game/kivita/chasutnakivitata/mysql-connector/src/main/user-impl/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources/game/kivita/chasutnakivitata/mysql-connector/src/test/java" />
-        </SOURCES>
-        <jarDirectory url="file://$MODULE_DIR$/src/main/resources/game/kivita/chasutnakivitata/mysql-connector" recursive="false" />
-      </library>
-    </orderEntry>
     <orderEntry type="library" name="Maven: com.microsoft.sqlserver:mssql-jdbc:12.2.0.jre11" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:17.0.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:win:17.0.0.1" level="project" />
