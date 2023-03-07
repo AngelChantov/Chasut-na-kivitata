@@ -49,7 +49,7 @@ public class GameController implements Initializable{
 
 
             Content.sceneNum = Content.dialogs[Content.sceneNum].nextDialog[0];
-            Content.scene(text,choice1,choice2,choice3,choice4);
+            Content.scene(text,choice1,choice2,choice3,choice4,background);
         }
 
         System.out.println("B1 works");
@@ -65,7 +65,7 @@ public class GameController implements Initializable{
 
 
             Content.sceneNum = Content.dialogs[Content.sceneNum].nextDialog[1];
-            Content.scene(text,choice1,choice2,choice3,choice4);
+            Content.scene(text,choice1,choice2,choice3,choice4,background);
         }
 
         System.out.println("B2 works");
@@ -81,7 +81,7 @@ public class GameController implements Initializable{
 
 
             Content.sceneNum = Content.dialogs[Content.sceneNum].nextDialog[2];
-            Content.scene(text,choice1,choice2,choice3,choice4);
+            Content.scene(text,choice1,choice2,choice3,choice4,background);
         }
 
         System.out.println("B3 works");
@@ -97,7 +97,7 @@ public class GameController implements Initializable{
 
 
             Content.sceneNum = Content.dialogs[Content.sceneNum].nextDialog[3];
-            Content.scene(text,choice1,choice2,choice3,choice4);
+            Content.scene(text,choice1,choice2,choice3,choice4,background);
 
         }
 
@@ -109,10 +109,10 @@ public class GameController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        File file = new File("src/main/resources/game/kivita/chasutnakivitata/pictures/krasi.png");
+        File file = new File("src/main/resources/game/kivita/chasutnakivitata/pictures/Krasi.png");
         Image image = new Image(file.toURI().toString());
         leftpic.setImage(image);
-        Content.scene(text,choice1,choice2,choice3,choice4);
+        Content.scene(text,choice1,choice2,choice3,choice4,background);
     }
 
 

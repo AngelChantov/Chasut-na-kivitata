@@ -6,14 +6,16 @@ public class Dialog {
     public String[] options;
     public int[] nextDialog;
     public int[] bonusPoints;
+    public String background;
 
     public int choice;
 
-    public Dialog(String text, String[] options, int[] nextDialog, int[] bonusPoints) {
+    public Dialog(String text, String[] options, int[] nextDialog, int[] bonusPoints, String background) {
         this.text = text;
         this.options = options;
         this.nextDialog = nextDialog;
         this.bonusPoints = bonusPoints;
+        this.background = background;
     }
 
 }
