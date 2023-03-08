@@ -1,26 +1,17 @@
 package game.kivita.chasutnakivitata.Controllers;
 
 import game.kivita.chasutnakivitata.DataBaseDetails;
+import game.kivita.chasutnakivitata.Game.Content;
 import game.kivita.chasutnakivitata.Methods;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Rectangle2D;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
-import javafx.stage.Screen;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.sql.*;
-import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -48,7 +39,7 @@ public class SignUpController {
 
     @FXML
     void goToSignIn(ActionEvent event) throws IOException {
-        Methods.change(event, "SignIn.fxml", 480, 720);
+        Methods.changeStage(event, "SignIn.fxml", 480, 720);
     }
 
     @FXML
@@ -83,9 +74,9 @@ public class SignUpController {
             int result = stmt.executeUpdate();
 
             if (result > 0){
-
-                //TO-DO Character selection screen and get player name
-                Methods.change(event, "CharacterSelection.fxml",1280,720);
+                Content.firstName = firstName.getText();
+                Content.lastName = lastName.getText();
+                Methods.changeStage(event, "CharacterSelection.fxml",1280,720);
 
             }else {
 

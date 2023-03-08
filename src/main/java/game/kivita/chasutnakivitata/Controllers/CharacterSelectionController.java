@@ -12,17 +12,17 @@ public class CharacterSelectionController {
     @FXML
     void selectCharacterOne(ActionEvent event) throws IOException {
 
-        Content.character = "one";
+        Content.character = "Male";
 
-        Methods.change(event, "MainGame.fxml",1280,720);
+        Methods.changeStage(event, "MainGame.fxml",1280,720);
     }
 
     @FXML
     void selectCharacterTwo(ActionEvent event) throws IOException {
 
-        Content.character = "two";
+        Content.character = "Female";
 
-        Methods.change(event, "MainGame.fxml",1280,720);
+        Methods.changeStage(event, "MainGame.fxml",1280,720);
     }
 
 

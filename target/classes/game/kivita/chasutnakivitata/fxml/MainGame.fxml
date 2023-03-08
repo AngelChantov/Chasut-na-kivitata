@@ -14,9 +14,9 @@
          <image>
             <Image url="@../pictures/Backgrounds/room.jpg" />
          </image></ImageView>
-      <ImageView fx:id="rightpic" fitHeight="331.0" fitWidth="400.0" layoutX="790.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="leftpic" fitHeight="331.0" fitWidth="394.0" layoutX="92.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
-      <Line endX="1230.5" layoutX="73.0" layoutY="337.0" startX="-105.5" strokeWidth="5.0" />
+      <ImageView fx:id="rightpic" fitHeight="288.0" fitWidth="400.0" layoutX="790.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="leftpic" fitHeight="288.0" fitWidth="394.0" layoutX="92.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+      <Line endX="1230.5" layoutX="73.0" layoutY="339.0" startX="-105.5" strokeWidth="5.0" />
       <Pane layoutX="33.0" layoutY="360.0" prefHeight="339.0" prefWidth="1220.0" style="-fx-background-color: #8DF232;">
          <children>
             <Text fx:id="text" layoutX="38.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="1150.0">

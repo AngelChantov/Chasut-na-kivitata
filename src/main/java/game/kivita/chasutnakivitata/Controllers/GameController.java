@@ -1,10 +1,10 @@
 package game.kivita.chasutnakivitata.Controllers;
 
 import game.kivita.chasutnakivitata.Game.Content;
+import game.kivita.chasutnakivitata.Game.ContentManagement;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
@@ -49,11 +49,15 @@ public class GameController implements Initializable{
 
 
             Content.sceneNum = Content.dialogs[Content.sceneNum].nextDialog[0];
-            Content.scene(text,choice1,choice2,choice3,choice4,background);
+            ContentManagement.scene(text,choice1,choice2,choice3,choice4,leftpic,rightpic,background);
+
         }
 
         System.out.println("B1 works");
         System.out.println(Content.points);
+        System.out.println(Content.firstName);
+        System.out.println(Content.lastName);
+        System.out.println(Content.character);
     }
 
     @FXML
@@ -65,7 +69,7 @@ public class GameController implements Initializable{
 
 
             Content.sceneNum = Content.dialogs[Content.sceneNum].nextDialog[1];
-            Content.scene(text,choice1,choice2,choice3,choice4,background);
+            ContentManagement.scene(text,choice1,choice2,choice3,choice4,leftpic,rightpic,background);
         }
 
         System.out.println("B2 works");
@@ -81,7 +85,7 @@ public class GameController implements Initializable{
 
 
             Content.sceneNum = Content.dialogs[Content.sceneNum].nextDialog[2];
-            Content.scene(text,choice1,choice2,choice3,choice4,background);
+            ContentManagement.scene(text,choice1,choice2,choice3,choice4,leftpic,rightpic,background);
         }
 
         System.out.println("B3 works");
@@ -97,7 +101,7 @@ public class GameController implements Initializable{
 
 
             Content.sceneNum = Content.dialogs[Content.sceneNum].nextDialog[3];
-            Content.scene(text,choice1,choice2,choice3,choice4,background);
+            ContentManagement.scene(text,choice1,choice2,choice3,choice4,leftpic,rightpic,background);
 
         }
 
@@ -112,7 +116,7 @@ public class GameController implements Initializable{
         File file = new File("src/main/resources/game/kivita/chasutnakivitata/pictures/Characters/Krasi.png");
         Image image = new Image(file.toURI().toString());
         leftpic.setImage(image);
-        Content.scene(text,choice1,choice2,choice3,choice4,background);
+        ContentManagement.scene(text,choice1,choice2,choice3,choice4,leftpic,rightpic,background);
     }
 
 
