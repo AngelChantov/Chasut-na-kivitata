@@ -22,12 +22,13 @@ USE `chasutnakivitata` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `chasutnakivitata`.`register` (
   `idRegister` INT NOT NULL AUTO_INCREMENT,
-  `Fname` VARCHAR(45) NOT NULL,
-  `Lname` VARCHAR(45) NOT NULL,
+  `First name` VARCHAR(45) NOT NULL,
+  `Last name` VARCHAR(45) NOT NULL,
   `Email` VARCHAR(45) NOT NULL,
   `Password` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idRegister`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8mb3;
 
 
@@ -45,6 +46,7 @@ CREATE TABLE IF NOT EXISTS `chasutnakivitata`.`scores` (
     FOREIGN KEY (`idRegister`)
     REFERENCES `chasutnakivitata`.`register` (`idRegister`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8mb3;
 
 

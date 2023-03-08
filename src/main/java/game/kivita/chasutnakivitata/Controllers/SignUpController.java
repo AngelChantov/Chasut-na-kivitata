@@ -45,8 +45,8 @@ public class SignUpController {
     @FXML
     void signUp(ActionEvent event) throws SQLException, IOException {
 
-        Connection connection = DriverManager.getConnection(DataBaseDetails.DB_URL, DataBaseDetails.USER, DataBaseDetails.PASS);
-        PreparedStatement stmt = connection.prepareStatement("INSERT INTO register ( Fname, Lname, Email, Password) VALUES (?,?,?,?)");
+        final Connection connection = DriverManager.getConnection(DataBaseDetails.DB_URL, DataBaseDetails.USER, DataBaseDetails.PASS);
+        final PreparedStatement stmt = connection.prepareStatement("INSERT INTO register ( `First name`, `Last name`, Email, Password) VALUES (?,?,?,?)");
 
         Pattern pattern = Pattern.compile("^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$");
         Matcher matcher = pattern.matcher(email.getText());

@@ -40,8 +40,8 @@ public class SignInController {
     @FXML
     void logIn(ActionEvent event) throws SQLException, IOException {
 
-        Connection connection = DriverManager.getConnection(DataBaseDetails.DB_URL, DataBaseDetails.USER, DataBaseDetails.PASS);
-        PreparedStatement stmt = connection.prepareStatement("SELECT * FROM register WHERE email = ? AND password = ?");
+        final Connection connection = DriverManager.getConnection(DataBaseDetails.DB_URL, DataBaseDetails.USER, DataBaseDetails.PASS);
+        final PreparedStatement stmt = connection.prepareStatement("SELECT * FROM register WHERE email = ? AND password = ?");
 
         Pattern pattern = Pattern.compile("^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$");
         Matcher matcher = pattern.matcher(email.getText());
@@ -65,8 +65,8 @@ public class SignInController {
             if (!result.next()) {
                 inputError.setText("Email or password is incorrect.");
             } else {
-                Content.firstName = result.getString("Fname");
-                Content.lastName = result.getString("Lname");
+                Content.firstName = result.getString("First name");
+                Content.lastName = result.getString("Last name");
                 Methods.changeStage(event, "CharacterSelection.fxml",1280,720);
 
             }

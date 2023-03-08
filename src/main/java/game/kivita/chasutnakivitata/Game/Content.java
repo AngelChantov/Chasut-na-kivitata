@@ -1,13 +1,5 @@
 package game.kivita.chasutnakivitata.Game;
 
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.text.Text;
-
-import java.util.Objects;
-
 public class Content {
     static Dialog dialog1 = new Dialog(
             "Otivash na daskalo?",
@@ -51,14 +43,5 @@ public class Content {
     public static String lastName;
 
     public static String character;
-
-
-
-    //background changing by sceneNum
-    //sceneNum > 100 obshak
-    // 100 < sceneNum < 200 v daskalo
-    // 200 < sceneNum < 300 v daskalo s krasi
-
-
 
 }
