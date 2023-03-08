@@ -1,21 +1,23 @@
 package game.kivita.chasutnakivitata.Game;
 
 import game.kivita.chasutnakivitata.Methods;
+import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
+import java.io.IOException;
 import java.util.Objects;
 
 import static game.kivita.chasutnakivitata.Game.Content.*;
 
 public class ContentManagement {
-    public static void scene(Text text, Button choice1, Button choice2, Button choice3, Button choice4, ImageView leftPic, ImageView rightPic, ImageView background){
+    public static void scene(ActionEvent event,Text text, Button choice1, Button choice2, Button choice3, Button choice4, ImageView leftPic, ImageView rightPic, ImageView background) throws IOException {
 
         if (sceneNum == 99999){
-            //go to results
-            //Methods.changeStage();
+            Methods.changeStage(event, "Result.fxml", 1280,720);
+            return;
         }
 
         text.setText(dialogs[sceneNum].text);

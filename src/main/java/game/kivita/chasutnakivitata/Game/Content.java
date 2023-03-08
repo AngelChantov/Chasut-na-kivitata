@@ -13,7 +13,7 @@ public class Content {
             "Otivash na daskalo?",
             new String[]{"da", "ne", "", ""},
             new int[]{1,0},
-            new int[]{10,0},
+            new int[]{0,0},
             "Character.png",
             "null.png",
             "morning"
@@ -34,8 +34,8 @@ public class Content {
     static Dialog dialog3 = new Dialog(
             "nesho3",
             new String[]{"da", "ne", "mhm", ""},
-            new int[]{0,0,0,0},
-            new int[]{17,0,30,1},
+            new int[]{0,0,99999,0},
+            new int[]{17,30,0,0},
             "null.png",
             "null.png",
             "night"
