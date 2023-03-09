@@ -10,8 +10,6 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.sql.*;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 import static game.kivita.chasutnakivitata.Game.Content.*;
