@@ -10,6 +10,10 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Objects;
 
 public class Methods {
@@ -26,4 +30,32 @@ public class Methods {
         stage.setY((resolution.getHeight() - stage.getHeight())/2);
 
         stage.show();
-    }}
+    }
+
+    /*public static void session() throws SQLException {
+
+
+            final Connection connection = DriverManager.getConnection(DataBaseDetails.DB_URL, DataBaseDetails.USER, DataBaseDetails.PASS);
+            final PreparedStatement stmt = connection.prepareStatement("INSERT INTO register ( `First name`, `Last name`, Email, Password) VALUES (?,?,?,?)");
+            stmt.setString(1, firstName.getText());
+            stmt.setString(2, lastName.getText());
+            stmt.setString(3, email.getText().toLowerCase());
+            stmt.setString(4, password.getText());
+            int result = stmt.executeUpdate();
+
+
+
+
+    }*/
+
+
+
+
+
+
+
+
+
+
+
+}

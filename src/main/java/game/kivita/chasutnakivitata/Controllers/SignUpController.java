@@ -74,9 +74,8 @@ public class SignUpController {
             int result = stmt.executeUpdate();
 
             if (result > 0){
-                Content.firstName = firstName.getText();
-                Content.lastName = lastName.getText();
-                Methods.changeStage(event, "CharacterSelection.fxml",1280,720);
+
+                Methods.changeStage(event, "SignIn.fxml",480,720);
 
             }else {
 

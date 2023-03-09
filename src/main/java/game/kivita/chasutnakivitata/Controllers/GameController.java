@@ -11,6 +11,7 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 
@@ -41,7 +42,7 @@ public class GameController implements Initializable{
 
 
     @FXML
-    void button1(ActionEvent event) throws IOException {
+    void button1(ActionEvent event) throws IOException, SQLException {
 
         if (!Content.dialogs[Content.sceneNum].options[0].equals("")){
             Content.dialogs[Content.sceneNum].choice = 0;
@@ -61,7 +62,7 @@ public class GameController implements Initializable{
     }
 
     @FXML
-    void button2(ActionEvent event) throws IOException {
+    void button2(ActionEvent event) throws IOException, SQLException {
 
         if (!Content.dialogs[Content.sceneNum].options[1].equals("")){
             Content.dialogs[Content.sceneNum].choice = 1;
@@ -77,7 +78,7 @@ public class GameController implements Initializable{
     }
 
     @FXML
-    void button3(ActionEvent event) throws IOException {
+    void button3(ActionEvent event) throws IOException, SQLException {
 
         if (!Content.dialogs[Content.sceneNum].options[2].equals("")){
             Content.dialogs[Content.sceneNum].choice = 2;
@@ -93,7 +94,7 @@ public class GameController implements Initializable{
     }
 
     @FXML
-    void button4(ActionEvent event) throws IOException {
+    void button4(ActionEvent event) throws IOException, SQLException {
 
         if (!Content.dialogs[Content.sceneNum].options[3].equals("")){
             Content.dialogs[Content.sceneNum].choice = 3;
@@ -116,7 +117,7 @@ public class GameController implements Initializable{
         ActionEvent event = null;
         try {
             ContentManagement.scene(event,text,choice1,choice2,choice3,choice4,leftpic,rightpic,background);
-        } catch (IOException e) {
+        } catch (IOException | SQLException e) {
             e.printStackTrace();
         }
     }

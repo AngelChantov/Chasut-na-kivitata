@@ -67,6 +67,8 @@ public class SignInController {
             } else {
                 Content.firstName = result.getString("First name");
                 Content.lastName = result.getString("Last name");
+                Content.userID = result.getInt("idRegister");
+
                 Methods.changeStage(event, "CharacterSelection.fxml",1280,720);
 
             }

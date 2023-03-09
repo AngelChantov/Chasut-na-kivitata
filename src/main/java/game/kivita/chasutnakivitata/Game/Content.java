@@ -41,6 +41,7 @@ public class Content {
 
     public static String firstName;
     public static String lastName;
+    public static int userID;
 
     public static String character;
 
