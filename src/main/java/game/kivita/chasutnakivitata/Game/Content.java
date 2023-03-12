@@ -63,9 +63,39 @@ public class Content {
                     "room"),
 
             //6
-            randomDialog(),
-
+            randomDialogStart(),
 /*
+            //7
+            new Dialog("",
+                    new String[]{"", "", "", ""},
+                    new int[]{,,,},//-
+                    new int[]{,,,},
+                    "",
+                    "",
+                    ""
+            ),
+*/
+            //RANDOM DIALOG 1 CHOICE 1
+            new Dialog("Краси: Какво си драпаш косматите кивита? Я почвай да работиш!!!",
+                    new String[]{"Добре", "Добре", "Добре", "Добре"},
+                    new int[]{8,8,8,8},//-
+                    new int[]{-3,-1,-7,2},
+                    "Character.png",
+                    "KrasiAngry.gif",
+                    "room"
+            ),
+/*
+            //RANDOM DIALOG 1 CHOICE 2
+            new Dialog("",
+                    new String[]{"", "", "", ""},
+                    new int[]{,,,},//-
+                    new int[]{0,0,0,0},
+                    "",
+                    "",
+                    ""
+            ),
+
+            //RANDOM DIALOG 1 CHOICE 3
             new Dialog("",
                     new String[]{"", "", "", ""},
                     new int[]{,,,},//-
@@ -75,7 +105,7 @@ public class Content {
                     ""
             ),
 
-
+            //RANDOM DIALOG 1 CHOICE 4
             new Dialog("",
                     new String[]{"", "", "", ""},
                     new int[]{,,,},//-
@@ -84,28 +114,8 @@ public class Content {
                     "",
                     ""
             ),
-
-
-            new Dialog("",
-                    new String[]{"", "", "", ""},
-                    new int[]{,,,},//-
-                    new int[]{,,,},
-                    "",
-                    "",
-                    ""
-            ),
-
-
-            new Dialog("",
-                    new String[]{"", "", "", ""},
-                    new int[]{,,,},//-
-                    new int[]{,,,},
-                    "",
-                    "",
-                    ""
-            ),
-
-
+*/
+/*
             new Dialog("",
                     new String[]{"", "", "", ""},
                     new int[]{,,,},//-
@@ -138,21 +148,22 @@ public class Content {
 
     };
 
-    static Dialog randomDialog(){
+    static Dialog randomDialogStart(){
 
-        ArrayList<Dialog> dialogs = new ArrayList();
-        dialogs.add(
-                new Dialog("",
-                new String[]{""},
-                new int[]{,,,},//-
-                new int[]{,,,},
-                "",
-                "",
-                ""));
+        ArrayList<Dialog> randomDialogs = new ArrayList();
+        randomDialogs.add(
+                new Dialog(
+                        "Краси тупурка из стаята и минава покрай теб. Какво правиш?",
+                    new String[]{"Чешеш кивитата","Разказваш вица за човека с каса бира вместо гъз","Питаш го ти за виц","Работиш по проекта (Краси ще го има предвид)"},
+                    new int[]{dialogs.length-1,,,},//-
+                    new int[]{-2,,,},
+                    "Character.png",
+                    "Krasi.png",
+                    "room"));
+//dialogs.lenght - broq na random dialozite ^^^
 
-
-        return dialogs.get(0);
-    };
+        return randomDialogs.get(0);
+    }
 
 
 
