@@ -24,21 +24,21 @@
                   <Font size="28.0" />
                </font>
             </Text>
-            <Button fx:id="choice4" layoutX="917.0" layoutY="254.0" mnemonicParsing="false" onAction="#button4" prefHeight="85.0" prefWidth="305.0" style="-fx-background-color: #815C2D; -fx-border-color: #261d03;" text="Button" textFill="WHITE">
+            <Button fx:id="choice4" layoutX="917.0" layoutY="254.0" mnemonicParsing="false" onAction="#button4" prefHeight="85.0" prefWidth="305.0" style="-fx-background-color: #815C2D; -fx-border-color: #261d03;" text="Button" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
-                  <Font size="24.0" />
+                  <Font size="20.0" />
                </font></Button>
-            <Button fx:id="choice1" layoutX="-2.0" layoutY="254.0" mnemonicParsing="false" onAction="#button1" prefHeight="85.0" prefWidth="305.0" style="-fx-background-color: #815C2D; -fx-border-color: #261d03;" text="Button" textFill="WHITE">
+            <Button fx:id="choice1" layoutX="-2.0" layoutY="254.0" mnemonicParsing="false" onAction="#button1" prefHeight="85.0" prefWidth="305.0" style="-fx-background-color: #815C2D; -fx-border-color: #261d03;" text="Button" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
-                  <Font size="24.0" />
+                  <Font size="20.0" />
                </font></Button>
-            <Button fx:id="choice2" layoutX="296.0" layoutY="254.0" mnemonicParsing="false" onAction="#button2" prefHeight="85.0" prefWidth="322.0" style="-fx-background-color: #815C2D; -fx-border-color: #261d03;" text="Button" textFill="WHITE">
+            <Button fx:id="choice2" layoutX="296.0" layoutY="254.0" mnemonicParsing="false" onAction="#button2" prefHeight="85.0" prefWidth="314.0" style="-fx-background-color: #815C2D; -fx-border-color: #261d03;" text="Button" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
-                  <Font size="24.0" />
+                  <Font size="20.0" />
                </font></Button>
-            <Button fx:id="choice3" layoutX="609.0" layoutY="254.0" mnemonicParsing="false" onAction="#button3" prefHeight="85.0" prefWidth="314.0" style="-fx-background-color: #815C2D; -fx-border-color: #261d03;" text="Button" textFill="WHITE">
+            <Button fx:id="choice3" layoutX="609.0" layoutY="254.0" mnemonicParsing="false" onAction="#button3" prefHeight="85.0" prefWidth="314.0" style="-fx-background-color: #815C2D; -fx-border-color: #261d03;" text="Button" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
-                  <Font size="24.0" />
+                  <Font size="20.0" />
                </font></Button>
          </children>
       </Pane>
