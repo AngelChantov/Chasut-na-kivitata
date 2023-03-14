@@ -45,8 +45,8 @@ public class GameController implements Initializable{
     void button1(ActionEvent event) throws IOException, SQLException {
 
         if (!Content.dialogs[Content.sceneNum].options[0].equals("")){
-            Content.dialogs[Content.sceneNum].choice = 0;
-            Content.points = Content.points + Content.dialogs[Content.sceneNum].bonusPoints[0];
+
+            Content.points += Content.dialogs[Content.sceneNum].bonusPoints[0];
 
 
             Content.sceneNum = Content.dialogs[Content.sceneNum].nextDialog[0];
@@ -54,18 +54,13 @@ public class GameController implements Initializable{
 
         }
 
-        System.out.println("B1 works");
-        System.out.println(Content.points);
-        System.out.println(Content.firstName);
-        System.out.println(Content.lastName);
-        System.out.println(Content.character);
     }
 
     @FXML
     void button2(ActionEvent event) throws IOException, SQLException {
 
         if (!Content.dialogs[Content.sceneNum].options[1].equals("")){
-            Content.dialogs[Content.sceneNum].choice = 1;
+
             Content.points += Content.dialogs[Content.sceneNum].bonusPoints[1];
 
 
@@ -73,15 +68,13 @@ public class GameController implements Initializable{
             ContentManagement.scene(event,text,choice1,choice2,choice3,choice4,leftpic,rightpic,background);
         }
 
-        System.out.println("B2 works");
-        System.out.println(Content.points);
     }
 
     @FXML
     void button3(ActionEvent event) throws IOException, SQLException {
 
         if (!Content.dialogs[Content.sceneNum].options[2].equals("")){
-            Content.dialogs[Content.sceneNum].choice = 2;
+
             Content.points += Content.dialogs[Content.sceneNum].bonusPoints[2];
 
 
@@ -89,15 +82,13 @@ public class GameController implements Initializable{
             ContentManagement.scene(event,text,choice1,choice2,choice3,choice4,leftpic,rightpic,background);
         }
 
-        System.out.println("B3 works");
-        System.out.println(Content.points);
     }
 
     @FXML
     void button4(ActionEvent event) throws IOException, SQLException {
 
         if (!Content.dialogs[Content.sceneNum].options[3].equals("")){
-            Content.dialogs[Content.sceneNum].choice = 3;
+
             Content.points += Content.dialogs[Content.sceneNum].bonusPoints[3];
 
 
@@ -106,8 +97,6 @@ public class GameController implements Initializable{
 
         }
 
-        System.out.println("B4 works");
-        System.out.println(Content.points);
     }
 
 

@@ -10,8 +10,6 @@ public class Dialog {
     public String rightPic;
     public String background;
 
-    public int choice;
-
     public Dialog(String text, String[] options, int[] nextDialog, int[] bonusPoints, String leftPic, String rightPic, String background) {
         this.text = text;
         this.options = options;
