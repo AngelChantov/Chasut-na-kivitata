@@ -31,7 +31,7 @@ public class Content {
 
             //1
             new Dialog("Даваш ли си зор да отидеш на час или ше бегаш?",
-                    new String[]{"Да, отивам на час", "Да, ама Краси ще почака", "От къв зор, да не ми е длъжен", ""},
+                    new String[]{"Да, отивам на час", "Да, ама Краси ще почака", "Ш са бегаме", ""},
                     new int[]{5, 2, 99999, 0},//-
                     new int[]{4, 0, -4, 0},
                     "Character.png",
@@ -89,7 +89,7 @@ public class Content {
             //7
             new Dialog("Краси: Какво си драпаш косматите кивита? Я почвай да работиш!!!",
                     new String[]{"Добре", "Добре", "Добре", "Добре"},
-                    new int[]{9,9,9,9},//-
+                    new int[]{11,11,11,11},//-
                     new int[]{-3, -1, -7, 2},
                     "Character.png",
                     "KrasiAngry.gif",
@@ -105,9 +105,9 @@ public class Content {
                     new String[]{"", "Кво ще кажете господине?", "Смееш се истерично", ""},
                     new int[]{0, 9, 10, 0},//-
                     new int[]{0, 3, -1, 0},
-                    "",
-                    "",
-                    ""
+                    "Character.gif",
+                    "Krasi.png",
+                    "room"
             ),
 
 
@@ -137,9 +137,9 @@ public class Content {
                     new String[]{"", "Към следващата седмица", "", ""},
                     new int[]{0,12,0,0},//-
                     new int[]{0,0,0,0},
-                    "",
-                    "",
-                    ""
+                    "Character.png",
+                    "null.png",
+                    "room"
             ),
 
 /* SAMPLE
@@ -158,7 +158,7 @@ public class Content {
             new Dialog("СЕДМИЦА 2\n" +
                     "Събуждаш се, сере ти се много, но има някой в тоалетната. Как постъпваш?",
                     new String[]{"Стискаш бузките и отиваш на час", "Друсаш крушата (в гащите) и отиваш на час", "Чакаш съквартиранта ти да излезе", "Сереш, след това ставаш от леглто"},
-                    new int[]{26,13,19,99999},//-
+                    new int[]{26,13,19,27},//-
                     new int[]{0,1,-2,0},
                     "null.png",
                     "null.png",
@@ -306,21 +306,18 @@ public class Content {
                     "null.png",
                     "morning"
             ),
+
+            //27
+            new Dialog("Възпитателите са потресани от миризмата, когато отиваш да ги питаш за свободна пералня. Целият ти ден минава в пране на чаршафите и дрехите ти. ",
+                    new String[]{"", "Към следващата седмица", "", ""},
+                    new int[]{0,99999,0,0},//-
+                    new int[]{0,-1,0,0},
+                    "Character.png",
+                    "null.png",
+                    "morning"
+            ),
     };
 
-
-
-/*
-    static Dialog randomDialogStart(){
-
-        ArrayList<Dialog> randomDialogs = new ArrayList<>();
-        randomDialogs.add(
-                );
-
-
-        return randomDialogs.get(0);
-    }
-*/
 
 
 
