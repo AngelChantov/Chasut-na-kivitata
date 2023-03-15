@@ -18,8 +18,6 @@ public class ContentManagement {
     public static void scene(ActionEvent event,Text text, Button choice1, Button choice2, Button choice3, Button choice4, ImageView leftPic, ImageView rightPic, ImageView background) throws IOException, SQLException {
 
         if (sceneNum == 99999){
-            Methods.changeStage(event, "Result.fxml", 1280,720);
-
 
             final Connection connection = DriverManager.getConnection(DataBaseDetails.DB_URL, DataBaseDetails.USER, DataBaseDetails.PASS);
             final PreparedStatement stmt = connection.prepareStatement("INSERT INTO scores (Score, Date, idRegister) VALUES (?,?,?)");
@@ -36,6 +34,35 @@ public class ContentManagement {
             }else {
                 System.out.println("Score set unsuccessful");
             }
+
+            Methods.changeStage(event, "Result.fxml", 1280,720);
+
+            return;
+        }
+
+        if (sceneNum == 99998){
+
+            final Connection connection = DriverManager.getConnection(DataBaseDetails.DB_URL, DataBaseDetails.USER, DataBaseDetails.PASS);
+            final PreparedStatement stmt = connection.prepareStatement("INSERT INTO scores (Score, Date, idRegister) VALUES (?,?,?)");
+
+            java.sql.Date date = new java.sql.Date(System.currentTimeMillis());
+
+            points = 0;
+
+            System.out.println(points);
+
+            stmt.setInt(1, points);
+            stmt.setDate(2, date);
+            stmt.setInt(3, userID);
+
+            int result = stmt.executeUpdate();
+            if (result > 0){
+                System.out.println("Score set successful");
+            }else {
+                System.out.println("Score set unsuccessful");
+            }
+
+            Methods.changeStage(event, "Result.fxml", 1280,720);
 
             return;
         }
