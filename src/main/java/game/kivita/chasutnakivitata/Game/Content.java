@@ -325,7 +325,7 @@ public class Content {
                     "Краси: Кво ще те правим теб?",
                     new String[]{"","Признаваш си", "Измисляш оправдание", ""},
                     new int[]{0,30,31,0},//-
-                    new int[]{0,1,3,0},
+                    new int[]{0,1,-1,0},
                     "Character.png",
                     "Krasi.gif",
                     "room"
@@ -379,7 +379,7 @@ public class Content {
             new Dialog("Отиваш на час и се надяваш да не се наакаш по време на часа.",
                     new String[]{"", "Сядаш си на мястото", "", ""},
                     new int[]{0,35,0,0},//-
-                    new int[]{0,1,0,0},
+                    new int[]{0,0,0,0},
                     "Character.png",
                     "null.png",
                     "morning"
@@ -410,7 +410,7 @@ public class Content {
                     "Краси: Къде ми е цигарката?",
                     new String[]{"", "Следващия път", "Нещо за голям се взехте", ""},
                     new int[]{0,39,39,0},//-
-                    new int[]{0, 0, -1, 0},
+                    new int[]{0, 0, -6, 0},
                     "Character.png",
                     "Krasi.gif",
                     "room"
@@ -421,7 +421,7 @@ public class Content {
                     "Краси: Къде ми е кафенцето?",
                     new String[]{"ЕЕЕЕ вече го изпих", "Нямате ли си???", "Нещо за голям се взехте", ""},
                     new int[]{39,39,39,0},//-
-                    new int[]{0, 1, -2, 0},
+                    new int[]{0, 1, -6, 0},
                     "Character.png",
                     "Krasi.gif",
                     "room"
@@ -441,7 +441,7 @@ public class Content {
             new Dialog("Възпитателите са потресани от миризмата, когато отиваш да ги питаш за свободна пералня. Целият ти ден минава в пране на чаршафите и дрехите ти.",
                     new String[]{"", "Към следващата седмица", "", ""},
                     new int[]{0,45,0,0},//-
-                    new int[]{0,-5,0,0},
+                    new int[]{0,-9,0,0},
                     "Character.png",
                     "null.png",
                     "morning"
